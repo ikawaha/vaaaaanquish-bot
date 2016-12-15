@@ -1,0 +1,9 @@
+{
+  "name": "vaaaaanquish-bot",
+  "description": "vaaaaanquish です...",
+  "repository": "https://github.com/ikawaha/vaaaaanquish-bot.git",
+  "image": "heroku/go:1.7",
+  "mount_dir": "src/github.com/mattn/vaaaaanquish-bot",
+  "logo": "https://raw.githubusercontent.com/mattn/deeeet-bot/master/static/gogogo.png",
+  "keywords": ["golang"]
+}
