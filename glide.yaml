@@ -1,4 +1,4 @@
-package: github.com/ikawaha/_vaaaaanquish-bot
+package: github.com/ikawaha/vaaaaanquish-bot
 import:
 - package: github.com/goadesign/goa
   subpackages:
@@ -8,11 +8,6 @@ import:
   - goatest
   - middleware
   - uuid
-- package: github.com/ikawaha/vaaaaanquish-bot
-  subpackages:
-  - app
-  - client
-  - tool/cli
 - package: github.com/spf13/cobra
 - package: golang.org/x/net
   subpackages:
