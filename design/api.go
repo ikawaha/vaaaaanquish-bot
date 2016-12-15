@@ -10,4 +10,8 @@ var _ = API("vaaaaanquish-bot", func() {
 	Description("vaaaaanquish さんの名前を間違って発言すると訂正してくれる slack bot です")
 	Scheme("http")
 	Host("localhost:8080")
+
+	Consumes("application/x-www-form-urlencoded", func() {
+		Package("github.com/goadesign/goa/encoding/form")
+	})
 })
