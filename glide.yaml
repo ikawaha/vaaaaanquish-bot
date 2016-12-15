@@ -5,6 +5,7 @@ import:
   - client
   - design
   - design/apidsl
+  - encoding/form
   - goatest
   - middleware
   - uuid

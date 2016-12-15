@@ -1,6 +1,8 @@
-hash: a5b4d2ea716145bba3dafad1e8e3335e1881a155a0faf003ab0b2cd7cf66a6cd
-updated: 2016-12-15T11:55:09.17063353+09:00
+hash: c3f6b7d3ba40167e1b639b74bc4fa4faa687c6d53f5e341ce836976b91eff5d2
+updated: 2016-12-16T00:04:46.582362016+09:00
 imports:
+- name: github.com/ajg/form
+  version: 523a5da1a92f01b01f840b61689c0340a0243532
 - name: github.com/armon/go-metrics
   version: 97c69685293dce4c0a2d0b19535179bbc976e4d2
 - name: github.com/dimfeld/httppath
@@ -14,15 +16,10 @@ imports:
   - design
   - design/apidsl
   - dslengine
+  - encoding/form
   - goatest
   - middleware
   - uuid
-- name: github.com/ikawaha/vaaaaanquish-bot
-  version: 36e0af74cfc4ddb74d7f6ef626d3fc4584c8c1e1
-  subpackages:
-  - app
-  - client
-  - tool/cli
 - name: github.com/inconshreveable/mousetrap
   version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
 - name: github.com/manveru/faker
@@ -38,7 +35,7 @@ imports:
 - name: github.com/zach-klippenstein/goregen
   version: 795b5e3961ea1912fde60af417ad85e86acc0d6a
 - name: golang.org/x/net
-  version: cfae461cedfdcab6e261a26eb77db53695623303
+  version: 468bac874d80e6ca892ecbb9bf09c72519b5b751
   subpackages:
   - context
   - websocket
