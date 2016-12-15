@@ -1,7 +1,7 @@
-# <img src="http://goa.design/img/goa-logo.svg">
+## <img src="http://goa.design/img/goa-logo.svg">
+*goa is a framework for building microservices and APIs in Go using a unique design-first approach.*
 
-goa is a framework for building microservices in Go using a unique design-first approach.
-
+---
 [![Build Status](https://travis-ci.org/goadesign/goa.svg?branch=master)](https://travis-ci.org/goadesign/goa)
 [![Windows Build status](https://ci.appveyor.com/api/projects/status/vixp37loj5i6qmaf/branch/master?svg=true)](https://ci.appveyor.com/project/RaphaelSimon/goa-oqtis/branch/master)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/goadesign/goa/blob/master/LICENSE)
@@ -51,12 +51,9 @@ framework from RightScale follows the same pattern and was an inspiration to goa
 
 Assuming you have a working [Go](https://golang.org) setup:
 ```
-go get github.com/goadesign/goa
-go get github.com/goadesign/goa/goagen
+go get -u github.com/goadesign/goa/...
 ```
 
-<<<<<<< HEAD
-=======
 ### Stable Versions
 
 goa follows [Semantic Versioning](http://semver.org/) which is a fancy way of saying it publishes
@@ -69,7 +66,6 @@ version (only `v1` at the moment). The recommended practice is to vendor the sta
 Current Release: `v1.1.0`
 Stable Branch: `v1`
 
->>>>>>> 10b2b28... Release v1.1.0
 ## Teaser
 
 ### 1. Design
@@ -130,7 +126,7 @@ This produces the following outputs:
 
 First let's implement the API - edit the file `operands.go` and replace the content of the `Add`
 function with:
-```
+```go
 // Add import for strconv
 import "strconv"
 
