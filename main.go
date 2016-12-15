@@ -3,10 +3,22 @@
 package main
 
 import (
+	"flag"
+	"os"
+
 	"github.com/goadesign/goa"
 	"github.com/goadesign/goa/middleware"
 	"github.com/ikawaha/vaaaaanquish-bot/app"
 )
+
+var addr = flag.String("addr", defaultAddr(), "server address")
+
+func defaultAddr() string {
+	if s := os.Getenv("PORT"); s != "" {
+		return ":" + s
+	}
+	return ":8080"
+}
 
 func main() {
 	// Create service
@@ -26,7 +38,7 @@ func main() {
 	app.MountPublicController(service, c2)
 
 	// Start service
-	if err := service.ListenAndServe(":8080"); err != nil {
+	if err := service.ListenAndServe(*addr); err != nil {
 		service.LogError("startup", "err", err)
 	}
 }
