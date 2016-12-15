@@ -294,7 +294,7 @@ func (cmd *InboundMessageCommand) Run(c *client.Client, args []string) error {
 	}
 	logger := goa.NewLogger(log.New(os.Stderr, "", log.LstdFlags))
 	ctx := goa.WithLogger(context.Background(), logger)
-	resp, err := c.InboundMessage(ctx, path, &payload, cmd.ContentType)
+	resp, err := c.InboundMessage(ctx, path, &payload)
 	if err != nil {
 		goa.LogError(ctx, "failed", "err", err)
 		return err

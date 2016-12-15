@@ -1,8 +1,5 @@
 consumes:
-- application/json
-- application/xml
-- application/gob
-- application/x-gob
+- application/x-www-form-urlencoded
 definitions:
   SlackMessage:
     example:
@@ -205,11 +202,6 @@ produces:
 - application/xml
 - application/gob
 - application/x-gob
-responses:
-  OK:
-    description: OK
-    schema:
-      $ref: '#/definitions/VaaaaanquishBotMessage'
 schemes:
 - http
 swagger: "2.0"

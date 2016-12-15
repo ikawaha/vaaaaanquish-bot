@@ -14,8 +14,8 @@ func InboundMessagePath() string {
 }
 
 // InboundMessage makes a request to the inbound action endpoint of the message resource
-func (c *Client) InboundMessage(ctx context.Context, path string, payload *SlackMessage, contentType string) (*http.Response, error) {
-	req, err := c.NewInboundMessageRequest(ctx, path, payload, contentType)
+func (c *Client) InboundMessage(ctx context.Context, path string, payload *SlackMessage) (*http.Response, error) {
+	req, err := c.NewInboundMessageRequest(ctx, path, payload)
 	if err != nil {
 		return nil, err
 	}
@@ -23,12 +23,9 @@ func (c *Client) InboundMessage(ctx context.Context, path string, payload *Slack
 }
 
 // NewInboundMessageRequest create the request corresponding to the inbound action endpoint of the message resource.
-func (c *Client) NewInboundMessageRequest(ctx context.Context, path string, payload *SlackMessage, contentType string) (*http.Request, error) {
+func (c *Client) NewInboundMessageRequest(ctx context.Context, path string, payload *SlackMessage) (*http.Request, error) {
 	var body bytes.Buffer
-	if contentType == "" {
-		contentType = "*/*" // Use default encoder
-	}
-	err := c.Encoder.Encode(payload, &body, contentType)
+	err := c.Encoder.Encode(payload, &body, "*/*")
 	if err != nil {
 		return nil, fmt.Errorf("failed to encode body: %s", err)
 	}
@@ -40,10 +37,6 @@ func (c *Client) NewInboundMessageRequest(ctx context.Context, path string, payl
 	req, err := http.NewRequest("POST", u.String(), &body)
 	if err != nil {
 		return nil, err
-	}
-	header := req.Header
-	if contentType != "*/*" {
-		header.Set("Content-Type", contentType)
 	}
 	return req, nil
 }
