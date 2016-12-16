@@ -50,13 +50,6 @@ definitions:
         example: Omnis totam.
         type: string
     required:
-    - token
-    - team_id
-    - team_domain
-    - channel_id
-    - channel_name
-    - time_stamp
-    - user_id
     - text
     title: SlackMessage
     type: object
