@@ -11,21 +11,20 @@ func RequiredAttribute(name string, args ...interface{}) {
 }
 
 var SlackMessage = Type("SlackMessage", func() {
-	RequiredAttribute("token", String, "Slack Token")
-	RequiredAttribute("team_id", String, "Team ID")
-	RequiredAttribute("team_domain", String, "Team Domain")
-	RequiredAttribute("channel_id", String, "Channel ID")
-	RequiredAttribute("channel_name", String, "Channel Name")
-	RequiredAttribute("time_stamp", String, "Timestamp")
-	RequiredAttribute("user_id", String, "User ID")
-	RequiredAttribute("user_id", String, "User Name")
+	Attribute("token", String, "Slack Token")
+	Attribute("team_id", String, "Team ID")
+	Attribute("team_domain", String, "Team Domain")
+	Attribute("channel_id", String, "Channel ID")
+	Attribute("channel_name", String, "Channel Name")
+	Attribute("time_stamp", String, "Timestamp")
+	Attribute("user_id", String, "User ID")
+	Attribute("user_id", String, "User Name")
 	RequiredAttribute("text", String, "Message Text")
 	Attribute("trigger_word", String, "Trigger Word")
 })
 
 var _ = Resource("message", func() {
 	BasePath("/v1/slack")
-
 	Action("inbound", func() {
 		Routing(POST("/inbound"))
 		Payload(SlackMessage)
@@ -35,14 +34,7 @@ var _ = Resource("message", func() {
 
 var MessageMedia = MediaType("application/vnd.vaaaaanquish.bot.message+json", func() {
 	Attributes(func() {
-		RequiredAttribute("token", String, "Slack Token")
-		RequiredAttribute("channel_id", String, "Channel ID")
-		RequiredAttribute("channel_name", String, "Channel ID")
 		RequiredAttribute("text", String, "Message Text")
-		Attribute("user_name", String, "My bot")
-		Attribute("link_names", Integer, "Find and link channel names and usernames", func() {
-			Enum(1)
-		})
 	})
 	View("default", func() {
 		Attribute("token")

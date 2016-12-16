@@ -34,14 +34,7 @@ func (c *MessageController) Inbound(ctx *app.InboundMessageContext) error {
 }
 
 func toAppVaaaaanquishBotMessage(ctx *app.InboundMessageContext) *app.VaaaaanquishBotMessage {
-	one := 1
-	botName := "VaaaaanquishBot"
 	return &app.VaaaaanquishBotMessage{
-		ChannelID:   ctx.Payload.ChannelID,
-		ChannelName: ctx.Payload.ChannelName,
-		LinkNames:   &one,
-		Text:        ctx.Payload.Text,
-		Token:       ctx.Payload.Token,
-		UserName:    &botName,
+		Text: ctx.Payload.Text,
 	}
 }
