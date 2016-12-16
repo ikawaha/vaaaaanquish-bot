@@ -16,38 +16,14 @@ import "github.com/goadesign/goa"
 //
 // Identifier: application/vnd.vaaaaanquish.bot.message+json; view=default
 type VaaaaanquishBotMessage struct {
-	// Channel ID
-	ChannelID string `form:"channel_id" json:"channel_id" xml:"channel_id"`
-	// Channel ID
-	ChannelName string `form:"channel_name" json:"channel_name" xml:"channel_name"`
-	// Find and link channel names and usernames
-	LinkNames *int `form:"link_names,omitempty" json:"link_names,omitempty" xml:"link_names,omitempty"`
 	// Message Text
 	Text string `form:"text" json:"text" xml:"text"`
-	// Slack Token
-	Token string `form:"token" json:"token" xml:"token"`
-	// My bot
-	UserName *string `form:"user_name,omitempty" json:"user_name,omitempty" xml:"user_name,omitempty"`
 }
 
 // Validate validates the VaaaaanquishBotMessage media type instance.
 func (mt *VaaaaanquishBotMessage) Validate() (err error) {
-	if mt.Token == "" {
-		err = goa.MergeErrors(err, goa.MissingAttributeError(`response`, "token"))
-	}
-	if mt.ChannelID == "" {
-		err = goa.MergeErrors(err, goa.MissingAttributeError(`response`, "channel_id"))
-	}
-	if mt.ChannelName == "" {
-		err = goa.MergeErrors(err, goa.MissingAttributeError(`response`, "channel_name"))
-	}
 	if mt.Text == "" {
 		err = goa.MergeErrors(err, goa.MissingAttributeError(`response`, "text"))
-	}
-	if mt.LinkNames != nil {
-		if !(*mt.LinkNames == 1) {
-			err = goa.MergeErrors(err, goa.InvalidEnumValueError(`response.link_names`, *mt.LinkNames, []interface{}{1}))
-		}
 	}
 	return
 }

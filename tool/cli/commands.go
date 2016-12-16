@@ -48,15 +48,15 @@ func RegisterCommands(app *cobra.Command, c *client.Client) {
 Payload example:
 
 {
-   "channel_id": "Amet sunt id aut.",
-   "channel_name": "Dolores dignissimos expedita itaque inventore.",
-   "team_domain": "In aliquam odio.",
-   "team_id": "Ipsam itaque et.",
-   "text": "Qui odio est dolorum culpa provident architecto.",
-   "time_stamp": "Quo et ut unde ipsam mollitia voluptatem.",
-   "token": "Sit explicabo error quam.",
-   "trigger_word": "Quas quo corrupti sequi.",
-   "user_id": "Omnis totam."
+   "channel_id": "Occaecati ut perspiciatis.",
+   "channel_name": "Aut aspernatur reiciendis.",
+   "team_domain": "In totam optio.",
+   "team_id": "Amet ut.",
+   "text": "Amet sunt id aut.",
+   "time_stamp": "Dolores dignissimos expedita itaque inventore.",
+   "token": "In aliquam odio.",
+   "trigger_word": "Ipsam itaque et.",
+   "user_id": "Qui odio est dolorum culpa provident architecto."
 }`,
 		RunE: func(cmd *cobra.Command, args []string) error { return tmp1.Run(c, args) },
 	}

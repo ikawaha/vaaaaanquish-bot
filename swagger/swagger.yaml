@@ -3,51 +3,51 @@ consumes:
 definitions:
   SlackMessage:
     example:
-      channel_id: Amet sunt id aut.
-      channel_name: Dolores dignissimos expedita itaque inventore.
-      team_domain: In aliquam odio.
-      team_id: Ipsam itaque et.
-      text: Qui odio est dolorum culpa provident architecto.
-      time_stamp: Quo et ut unde ipsam mollitia voluptatem.
-      token: Sit explicabo error quam.
-      trigger_word: Quas quo corrupti sequi.
-      user_id: Omnis totam.
+      channel_id: Occaecati ut perspiciatis.
+      channel_name: Aut aspernatur reiciendis.
+      team_domain: In totam optio.
+      team_id: Amet ut.
+      text: Amet sunt id aut.
+      time_stamp: Dolores dignissimos expedita itaque inventore.
+      token: In aliquam odio.
+      trigger_word: Ipsam itaque et.
+      user_id: Qui odio est dolorum culpa provident architecto.
     properties:
       channel_id:
         description: Channel ID
-        example: Amet sunt id aut.
+        example: Occaecati ut perspiciatis.
         type: string
       channel_name:
         description: Channel Name
-        example: Dolores dignissimos expedita itaque inventore.
+        example: Aut aspernatur reiciendis.
         type: string
       team_domain:
         description: Team Domain
-        example: In aliquam odio.
+        example: In totam optio.
         type: string
       team_id:
         description: Team ID
-        example: Ipsam itaque et.
+        example: Amet ut.
         type: string
       text:
         description: Message Text
-        example: Qui odio est dolorum culpa provident architecto.
+        example: Amet sunt id aut.
         type: string
       time_stamp:
         description: Timestamp
-        example: Quo et ut unde ipsam mollitia voluptatem.
+        example: Dolores dignissimos expedita itaque inventore.
         type: string
       token:
         description: Slack Token
-        example: Sit explicabo error quam.
+        example: In aliquam odio.
         type: string
       trigger_word:
         description: Trigger Word
-        example: Quas quo corrupti sequi.
+        example: Ipsam itaque et.
         type: string
       user_id:
         description: User Name
-        example: Omnis totam.
+        example: Qui odio est dolorum culpa provident architecto.
         type: string
     required:
     - text
@@ -56,43 +56,13 @@ definitions:
   VaaaaanquishBotMessage:
     description: VaaaaanquishBotMessage media type (default view)
     example:
-      channel_id: Esse et facere quia maiores.
-      channel_name: Occaecati ut perspiciatis.
-      link_names: 1
-      text: Aspernatur reiciendis.
-      token: In totam optio.
-      user_name: Amet ut.
+      text: Esse et facere quia maiores.
     properties:
-      channel_id:
-        description: Channel ID
-        example: Esse et facere quia maiores.
-        type: string
-      channel_name:
-        description: Channel ID
-        example: Occaecati ut perspiciatis.
-        type: string
-      link_names:
-        description: Find and link channel names and usernames
-        enum:
-        - 1
-        example: 1
-        type: integer
       text:
         description: Message Text
-        example: Aspernatur reiciendis.
-        type: string
-      token:
-        description: Slack Token
-        example: In totam optio.
-        type: string
-      user_name:
-        description: My bot
-        example: Amet ut.
+        example: Esse et facere quia maiores.
         type: string
     required:
-    - token
-    - channel_id
-    - channel_name
     - text
     title: 'Mediatype identifier: application/vnd.vaaaaanquish.bot.message+json; view=default'
     type: object
