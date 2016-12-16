@@ -53,10 +53,11 @@ Payload example:
    "team_domain": "In totam optio.",
    "team_id": "Amet ut.",
    "text": "Amet sunt id aut.",
-   "time_stamp": "Dolores dignissimos expedita itaque inventore.",
+   "timestamp": "Dolores dignissimos expedita itaque inventore.",
    "token": "In aliquam odio.",
    "trigger_word": "Ipsam itaque et.",
-   "user_id": "Qui odio est dolorum culpa provident architecto."
+   "user_id": "Qui odio est dolorum culpa provident architecto.",
+   "user_name": "Quo et ut unde ipsam mollitia voluptatem."
 }`,
 		RunE: func(cmd *cobra.Command, args []string) error { return tmp1.Run(c, args) },
 	}

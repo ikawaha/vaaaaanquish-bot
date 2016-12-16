@@ -25,13 +25,15 @@ type slackMessage struct {
 	// Message Text
 	Text *string `form:"text,omitempty" json:"text,omitempty" xml:"text,omitempty"`
 	// Timestamp
-	TimeStamp *string `form:"time_stamp,omitempty" json:"time_stamp,omitempty" xml:"time_stamp,omitempty"`
+	Timestamp *string `form:"timestamp,omitempty" json:"timestamp,omitempty" xml:"timestamp,omitempty"`
 	// Slack Token
 	Token *string `form:"token,omitempty" json:"token,omitempty" xml:"token,omitempty"`
 	// Trigger Word
 	TriggerWord *string `form:"trigger_word,omitempty" json:"trigger_word,omitempty" xml:"trigger_word,omitempty"`
-	// User Name
+	// User ID
 	UserID *string `form:"user_id,omitempty" json:"user_id,omitempty" xml:"user_id,omitempty"`
+	// User Name
+	UserName *string `form:"user_name,omitempty" json:"user_name,omitempty" xml:"user_name,omitempty"`
 }
 
 // Validate validates the slackMessage type instance.
@@ -60,8 +62,8 @@ func (ut *slackMessage) Publicize() *SlackMessage {
 	if ut.Text != nil {
 		pub.Text = *ut.Text
 	}
-	if ut.TimeStamp != nil {
-		pub.TimeStamp = ut.TimeStamp
+	if ut.Timestamp != nil {
+		pub.Timestamp = ut.Timestamp
 	}
 	if ut.Token != nil {
 		pub.Token = ut.Token
@@ -71,6 +73,9 @@ func (ut *slackMessage) Publicize() *SlackMessage {
 	}
 	if ut.UserID != nil {
 		pub.UserID = ut.UserID
+	}
+	if ut.UserName != nil {
+		pub.UserName = ut.UserName
 	}
 	return &pub
 }
@@ -88,13 +93,15 @@ type SlackMessage struct {
 	// Message Text
 	Text string `form:"text" json:"text" xml:"text"`
 	// Timestamp
-	TimeStamp *string `form:"time_stamp,omitempty" json:"time_stamp,omitempty" xml:"time_stamp,omitempty"`
+	Timestamp *string `form:"timestamp,omitempty" json:"timestamp,omitempty" xml:"timestamp,omitempty"`
 	// Slack Token
 	Token *string `form:"token,omitempty" json:"token,omitempty" xml:"token,omitempty"`
 	// Trigger Word
 	TriggerWord *string `form:"trigger_word,omitempty" json:"trigger_word,omitempty" xml:"trigger_word,omitempty"`
-	// User Name
+	// User ID
 	UserID *string `form:"user_id,omitempty" json:"user_id,omitempty" xml:"user_id,omitempty"`
+	// User Name
+	UserName *string `form:"user_name,omitempty" json:"user_name,omitempty" xml:"user_name,omitempty"`
 }
 
 // Validate validates the SlackMessage type instance.

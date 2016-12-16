@@ -8,10 +8,11 @@ definitions:
       team_domain: In totam optio.
       team_id: Amet ut.
       text: Amet sunt id aut.
-      time_stamp: Dolores dignissimos expedita itaque inventore.
+      timestamp: Dolores dignissimos expedita itaque inventore.
       token: In aliquam odio.
       trigger_word: Ipsam itaque et.
       user_id: Qui odio est dolorum culpa provident architecto.
+      user_name: Quo et ut unde ipsam mollitia voluptatem.
     properties:
       channel_id:
         description: Channel ID
@@ -33,7 +34,7 @@ definitions:
         description: Message Text
         example: Amet sunt id aut.
         type: string
-      time_stamp:
+      timestamp:
         description: Timestamp
         example: Dolores dignissimos expedita itaque inventore.
         type: string
@@ -46,8 +47,12 @@ definitions:
         example: Ipsam itaque et.
         type: string
       user_id:
-        description: User Name
+        description: User ID
         example: Qui odio est dolorum culpa provident architecto.
+        type: string
+      user_name:
+        description: User Name
+        example: Quo et ut unde ipsam mollitia voluptatem.
         type: string
     required:
     - text
