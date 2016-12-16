@@ -37,11 +37,6 @@ var MessageMedia = MediaType("application/vnd.vaaaaanquish.bot.message+json", fu
 		RequiredAttribute("text", String, "Message Text")
 	})
 	View("default", func() {
-		Attribute("token")
-		Attribute("channel_id")
-		Attribute("channel_name")
 		Attribute("text")
-		Attribute("user_name")
-		Attribute("link_names")
 	})
 })
