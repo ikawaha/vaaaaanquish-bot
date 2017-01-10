@@ -19,8 +19,16 @@ import (
 //
 // Identifier: application/vnd.vaaaaanquish.bot.message+json; view=default
 type VaaaaanquishBotMessage struct {
+	// Other Channel
+	Channel *string `form:"channel,omitempty" json:"channel,omitempty" xml:"channel,omitempty"`
+	// ICON Emoji
+	IconEmoji *string `form:"icon_emoji,omitempty" json:"icon_emoji,omitempty" xml:"icon_emoji,omitempty"`
+	// ICON URL
+	IconURL *string `form:"icon_url,omitempty" json:"icon_url,omitempty" xml:"icon_url,omitempty"`
 	// Message Text
 	Text string `form:"text" json:"text" xml:"text"`
+	// User Name
+	Username *string `form:"username,omitempty" json:"username,omitempty" xml:"username,omitempty"`
 }
 
 // Validate validates the VaaaaanquishBotMessage media type instance.

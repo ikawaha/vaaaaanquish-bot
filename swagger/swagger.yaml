@@ -3,62 +3,62 @@ consumes:
 definitions:
   SlackMessage:
     example:
-      channel_id: Occaecati ut perspiciatis.
-      channel_name: Aut aspernatur reiciendis.
-      service_id: In totam optio.
-      team_domain: Amet ut.
-      team_id: Amet sunt id aut.
-      text: Dolores dignissimos expedita itaque inventore.
-      timestamp: 0.3135134
-      token: Aliquam odio sunt ipsam.
-      trigger_word: Et ad qui odio est dolorum culpa.
-      user_id: Architecto aut quo et ut.
-      user_name: Ipsam mollitia voluptatem ut sit explicabo.
+      channel_id: Amet sunt id aut.
+      channel_name: Dolores dignissimos expedita itaque inventore.
+      service_id: In aliquam odio.
+      team_domain: Ipsam itaque et.
+      team_id: Qui odio est dolorum culpa provident architecto.
+      text: Quo et ut unde ipsam mollitia voluptatem.
+      timestamp: 0.60818595
+      token: Explicabo error quam dignissimos quas.
+      trigger_word: Corrupti sequi ut.
+      user_id: Totam harum.
+      user_name: Est qui veniam.
     properties:
       channel_id:
         description: Channel ID
-        example: Occaecati ut perspiciatis.
+        example: Amet sunt id aut.
         type: string
       channel_name:
         description: Channel Name
-        example: Aut aspernatur reiciendis.
+        example: Dolores dignissimos expedita itaque inventore.
         type: string
       service_id:
         description: Service ID
-        example: In totam optio.
+        example: In aliquam odio.
         type: string
       team_domain:
         description: Team Domain
-        example: Amet ut.
+        example: Ipsam itaque et.
         type: string
       team_id:
         description: Team ID
-        example: Amet sunt id aut.
+        example: Qui odio est dolorum culpa provident architecto.
         type: string
       text:
         description: Message Text
-        example: Dolores dignissimos expedita itaque inventore.
+        example: Quo et ut unde ipsam mollitia voluptatem.
         type: string
       timestamp:
         description: Timestamp
-        example: 0.3135134
+        example: 0.60818595
         format: double
         type: number
       token:
         description: Slack Token
-        example: Aliquam odio sunt ipsam.
+        example: Explicabo error quam dignissimos quas.
         type: string
       trigger_word:
         description: Trigger Word
-        example: Et ad qui odio est dolorum culpa.
+        example: Corrupti sequi ut.
         type: string
       user_id:
         description: User ID
-        example: Architecto aut quo et ut.
+        example: Totam harum.
         type: string
       user_name:
         description: User Name
-        example: Ipsam mollitia voluptatem ut sit explicabo.
+        example: Est qui veniam.
         type: string
     required:
     - text
@@ -67,11 +67,31 @@ definitions:
   VaaaaanquishBotMessage:
     description: VaaaaanquishBotMessage media type (default view)
     example:
-      text: Esse et facere quia maiores.
+      channel: Esse et facere quia maiores.
+      icon_emoji: Occaecati ut perspiciatis.
+      icon_url: Aut aspernatur reiciendis.
+      text: In totam optio.
+      username: Amet ut.
     properties:
+      channel:
+        description: Other Channel
+        example: Esse et facere quia maiores.
+        type: string
+      icon_emoji:
+        description: ICON Emoji
+        example: Occaecati ut perspiciatis.
+        type: string
+      icon_url:
+        description: ICON URL
+        example: Aut aspernatur reiciendis.
+        type: string
       text:
         description: Message Text
-        example: Esse et facere quia maiores.
+        example: In totam optio.
+        type: string
+      username:
+        description: User Name
+        example: Amet ut.
         type: string
     required:
     - text
@@ -176,6 +196,11 @@ produces:
 - application/xml
 - application/gob
 - application/x-gob
+responses:
+  OK:
+    description: OK
+    schema:
+      $ref: '#/definitions/VaaaaanquishBotMessage'
 schemes:
 - http
 swagger: "2.0"
