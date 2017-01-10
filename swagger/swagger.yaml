@@ -5,14 +5,15 @@ definitions:
     example:
       channel_id: Occaecati ut perspiciatis.
       channel_name: Aut aspernatur reiciendis.
-      team_domain: In totam optio.
-      team_id: Amet ut.
-      text: Amet sunt id aut.
-      timestamp: Dolores dignissimos expedita itaque inventore.
-      token: In aliquam odio.
-      trigger_word: Ipsam itaque et.
-      user_id: Qui odio est dolorum culpa provident architecto.
-      user_name: Quo et ut unde ipsam mollitia voluptatem.
+      service_id: In totam optio.
+      team_domain: Amet ut.
+      team_id: Amet sunt id aut.
+      text: Dolores dignissimos expedita itaque inventore.
+      timestamp: 0.3135134
+      token: Aliquam odio sunt ipsam.
+      trigger_word: Et ad qui odio est dolorum culpa.
+      user_id: Architecto aut quo et ut.
+      user_name: Ipsam mollitia voluptatem ut sit explicabo.
     properties:
       channel_id:
         description: Channel ID
@@ -22,37 +23,42 @@ definitions:
         description: Channel Name
         example: Aut aspernatur reiciendis.
         type: string
+      service_id:
+        description: Service ID
+        example: In totam optio.
+        type: string
       team_domain:
         description: Team Domain
-        example: In totam optio.
+        example: Amet ut.
         type: string
       team_id:
         description: Team ID
-        example: Amet ut.
+        example: Amet sunt id aut.
         type: string
       text:
         description: Message Text
-        example: Amet sunt id aut.
+        example: Dolores dignissimos expedita itaque inventore.
         type: string
       timestamp:
         description: Timestamp
-        example: Dolores dignissimos expedita itaque inventore.
-        type: string
+        example: 0.3135134
+        format: double
+        type: number
       token:
         description: Slack Token
-        example: In aliquam odio.
+        example: Aliquam odio sunt ipsam.
         type: string
       trigger_word:
         description: Trigger Word
-        example: Ipsam itaque et.
+        example: Et ad qui odio est dolorum culpa.
         type: string
       user_id:
         description: User ID
-        example: Qui odio est dolorum culpa provident architecto.
+        example: Architecto aut quo et ut.
         type: string
       user_name:
         description: User Name
-        example: Quo et ut unde ipsam mollitia voluptatem.
+        example: Ipsam mollitia voluptatem ut sit explicabo.
         type: string
     required:
     - text

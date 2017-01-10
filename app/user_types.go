@@ -18,6 +18,8 @@ type slackMessage struct {
 	ChannelID *string `form:"channel_id,omitempty" json:"channel_id,omitempty" xml:"channel_id,omitempty"`
 	// Channel Name
 	ChannelName *string `form:"channel_name,omitempty" json:"channel_name,omitempty" xml:"channel_name,omitempty"`
+	// Service ID
+	ServiceID *string `form:"service_id,omitempty" json:"service_id,omitempty" xml:"service_id,omitempty"`
 	// Team Domain
 	TeamDomain *string `form:"team_domain,omitempty" json:"team_domain,omitempty" xml:"team_domain,omitempty"`
 	// Team ID
@@ -25,7 +27,7 @@ type slackMessage struct {
 	// Message Text
 	Text *string `form:"text,omitempty" json:"text,omitempty" xml:"text,omitempty"`
 	// Timestamp
-	Timestamp *string `form:"timestamp,omitempty" json:"timestamp,omitempty" xml:"timestamp,omitempty"`
+	Timestamp *float64 `form:"timestamp,omitempty" json:"timestamp,omitempty" xml:"timestamp,omitempty"`
 	// Slack Token
 	Token *string `form:"token,omitempty" json:"token,omitempty" xml:"token,omitempty"`
 	// Trigger Word
@@ -52,6 +54,9 @@ func (ut *slackMessage) Publicize() *SlackMessage {
 	}
 	if ut.ChannelName != nil {
 		pub.ChannelName = ut.ChannelName
+	}
+	if ut.ServiceID != nil {
+		pub.ServiceID = ut.ServiceID
 	}
 	if ut.TeamDomain != nil {
 		pub.TeamDomain = ut.TeamDomain
@@ -86,6 +91,8 @@ type SlackMessage struct {
 	ChannelID *string `form:"channel_id,omitempty" json:"channel_id,omitempty" xml:"channel_id,omitempty"`
 	// Channel Name
 	ChannelName *string `form:"channel_name,omitempty" json:"channel_name,omitempty" xml:"channel_name,omitempty"`
+	// Service ID
+	ServiceID *string `form:"service_id,omitempty" json:"service_id,omitempty" xml:"service_id,omitempty"`
 	// Team Domain
 	TeamDomain *string `form:"team_domain,omitempty" json:"team_domain,omitempty" xml:"team_domain,omitempty"`
 	// Team ID
@@ -93,7 +100,7 @@ type SlackMessage struct {
 	// Message Text
 	Text string `form:"text" json:"text" xml:"text"`
 	// Timestamp
-	Timestamp *string `form:"timestamp,omitempty" json:"timestamp,omitempty" xml:"timestamp,omitempty"`
+	Timestamp *float64 `form:"timestamp,omitempty" json:"timestamp,omitempty" xml:"timestamp,omitempty"`
 	// Slack Token
 	Token *string `form:"token,omitempty" json:"token,omitempty" xml:"token,omitempty"`
 	// Trigger Word

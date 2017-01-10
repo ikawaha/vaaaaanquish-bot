@@ -50,14 +50,15 @@ Payload example:
 {
    "channel_id": "Occaecati ut perspiciatis.",
    "channel_name": "Aut aspernatur reiciendis.",
-   "team_domain": "In totam optio.",
-   "team_id": "Amet ut.",
-   "text": "Amet sunt id aut.",
-   "timestamp": "Dolores dignissimos expedita itaque inventore.",
-   "token": "In aliquam odio.",
-   "trigger_word": "Ipsam itaque et.",
-   "user_id": "Qui odio est dolorum culpa provident architecto.",
-   "user_name": "Quo et ut unde ipsam mollitia voluptatem."
+   "service_id": "In totam optio.",
+   "team_domain": "Amet ut.",
+   "team_id": "Amet sunt id aut.",
+   "text": "Dolores dignissimos expedita itaque inventore.",
+   "timestamp": 0.3135133934970023,
+   "token": "Aliquam odio sunt ipsam.",
+   "trigger_word": "Et ad qui odio est dolorum culpa.",
+   "user_id": "Architecto aut quo et ut.",
+   "user_name": "Ipsam mollitia voluptatem ut sit explicabo."
 }`,
 		RunE: func(cmd *cobra.Command, args []string) error { return tmp1.Run(c, args) },
 	}
