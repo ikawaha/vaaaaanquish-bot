@@ -34,7 +34,9 @@ func (c *MessageController) Inbound(ctx *app.InboundMessageContext) error {
 }
 
 func toAppVaaaaanquishBotMessage(ctx *app.InboundMessageContext) *app.VaaaaanquishBotMessage {
+	username := "Vaaaaanquish-bot"
 	return &app.VaaaaanquishBotMessage{
-		Text: ctx.Payload.Text,
+		Text:     ctx.Payload.Text,
+		Username: &username,
 	}
 }
